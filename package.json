@@ -1,0 +1,40 @@
+{
+  "type": "module",
+  "name": "motion-observer",
+  "version": "1.0.0",
+  "description": "Observe device orientation and motion in a browser-agnostic fashion using the Observer pattern.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc -p tsconfig.json && esbuild index.js --minify --allow-overwrite --outfile=index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EffortGames/MotionObserver.git"
+  },
+  "keywords": [
+    "motion",
+    "orientation",
+    "gyroscope",
+    "accelerometer",
+    "observer",
+    "typescript"
+  ],
+  "nodemonConfig": {
+    "ext": "ts",
+    "ignore": "index.d.ts",
+    "exec": "tsc || exit 1"
+  },
+  "author": "Auri Collings <me+oss@auri.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EffortGames/MotionObserver/issues"
+  },
+  "homepage": "https://github.com/EffortGames/MotionObserver#readme",
+  "devDependencies": {
+    "esbuild": "^0.25.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.8.3"
+  }
+}

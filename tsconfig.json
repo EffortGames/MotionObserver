@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+		/* Target & Language Features */
+    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2023", "DOM"],
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    
+    /* Bundler mode */
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+
+    /* Type Definition Generation */
+    "declaration": true,
+    "declarationMap": true,
+    
+    /* Linting */
+    "strict": true,
+    "removeComments": true,
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}
