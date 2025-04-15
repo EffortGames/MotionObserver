@@ -12,8 +12,6 @@ Motion Observer is tiny (~1.8KiB GZipped) zero-dependency library which exposes 
 npm install motion-observer
 ```
 
-&nbsp;
-
 ## Usage
 
 ```javascript
@@ -27,8 +25,6 @@ observer.on(MotionType.Acceleration, ({ detail: { acc } }) => console.log("Devic
 &nbsp;
 
 ## API
-
-&nbsp;
 
 ### `MotionObserver`
 
@@ -65,6 +61,8 @@ Adds a one-off event listener for the specified motion type. The callback will b
 #### `MotionObserver.requestPermissions(): Promise<void>`
 
 On some devices (iOS), the user must grant permission to observe motion events. This will be requested automatically when `observe` is called, or they can be manually requested using this static function. The prompt will not be shown to the user if this function is not called in response to a user event, which will cause the promise to reject immediately. If the user *manually* denies the permission prompt on iOS, they will need to completely restart their browser app before another request can be made, and all future calls to `requestPermissions` this session will be immediately rejected. On devices which do not require permissions, this function will resolve immediately.
+
+&nbsp;
 
 ### `MotionType`
 
@@ -123,13 +121,9 @@ Contains the following properties in the `detail` property:
 
 An array of four numbers representing a quaternion. The four components are in the following form: `[ x, y, z, w ]`. Can be spread directly into ThreeJS's `Quaternion` class, e.g.: `new Quaternion(...quat)`.
 
-&nbsp;
-
 ### Vector
 
 An array of three numbers representing a 3D vector. The three components are in the following form: `[ x, y, z ]`. Can be spread directly into ThreeJS's `Vector3` class, e.g.: `new Vector3(...vec)`.
-
-&nbsp;
 
 ### Matrix
 
@@ -140,8 +134,6 @@ An array of sixteen numbers representing a 4x4 Matrix in row-major order. Can be
 ## Developing
 
 Run `npm run dev` to watch the files for changes and build the library. The output will be in the `index.js` file. To build for production, run `npm run build`.
-
-&nbsp;
 
 ## Contributing
 
