@@ -42,19 +42,19 @@ Stops observing the motion types listed in `filter`, or all motion types if it i
 
 Completely disconnects the observer, stopping all motion events and removing all event listeners. This is equivalent to calling `unobserve` on all motion types, and then calling `removeEventListener` on all event listeners. This is useful for cleaning up the observer when it is no longer needed, such as when a component is unmounted in React.
 
-#### `addEventListener(event: MotionType, cb: (event: MotionObserverEvent) => void): void`
+#### `addEventListener(event: MotionType, cb: (event: Event) => void): void`
 
 **Aliases: `bind`, `on`**
 
-Adds an event listener for the specified motion type. The callback will be called with the appropriate `MotionObserverEvent` when an event is available. No events will be fired before `observe` is called, or if the specified `event` type was filtered out.
+Adds an event listener for the specified motion type. The callback will be called with the appropriate event when an event is available. No events will be fired before `observe` is called, or if the specified `event` type was filtered out.
 
-#### `removeEventListener(event: MotionType, cb: (event: MotionObserverEvent) => void): boolean`
+#### `removeEventListener(event: MotionType, cb: (event: Event) => void): boolean`
 
 **Aliases: `unbind`, `off`**
 
 Removes an event listener bound to a specified motion type. The callback will be removed from the list of callbacks, and will no longer be called when an event is available. Returns a boolean indicating if the callback was found.
 
-#### `once(event: MotionType, cb: (event: MotionObserverEvent) => void)`
+#### `once(event: MotionType, cb: (event: Event) => void)`
 
 Adds a one-off event listener for the specified motion type. The callback will be called once when an event of the appropriate type is available, then removed from the list of listeners. No events will be fired before `observe` is called, or if the specified `event` type was filtered out.
 
