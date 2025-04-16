@@ -2,7 +2,7 @@
 
 **Observe device orientation and motion in a browser-agnostic fashion using the Observer pattern.**
 
-Motion Observer is tiny (~1.8KiB GZipped) zero-dependency library which exposes a `MotionObserver` class, which can be used to observe device orientation and motion events in a browser agnostic way. The observer can report Orientation events (derived from the gyroscope) as euler components, quaternions, and 4d matrices, and it can also report motion events (linear acceleration from the device's accelerometer) as 3D vectors. The observer automatically handles prompting for user permissions if `observe` is called in response to a user-gesture, and will also standardize events between different OSes which have different coordinate systems (iOS).
+Motion Observer is a tiny (~1.8KiB GZipped) zero-dependency library which exposes a `MotionObserver` class, which can be used to observe device orientation and motion events in a browser agnostic way. The observer can report Orientation events (derived from the gyroscope) as euler components, quaternions, and 4d matrices, and it can also report motion events (linear acceleration from the device's accelerometer) as 3D vectors. The observer automatically handles prompting for user permissions if `observe` is called in response to a user-gesture, and will also standardize events between different OSes which have different coordinate systems (iOS).
 
 &nbsp;
 
