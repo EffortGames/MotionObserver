@@ -83,7 +83,7 @@ const GRAVITY = 9.80665;
 /** Maximum number of ms to wait for more precise events before determining that they are unsupported. */
 const MEASUREMENT_EPSILON = 20;
 /** iOS has reversed acceleration values compared to Android, so we need to invert them if we're on iOS. */
-const IS_IOS = isIOSPermissionGated(DeviceOrientationEvent);
+const IS_IOS = isIOSPermissionGated(window.DeviceOrientationEvent);
 
 /*********************************/
 /***** Math Helper Functions *****/
@@ -268,9 +268,9 @@ export class MotionObserver {
 	 */
 	static async requestPermissions(): Promise<void> {
 		await Promise.all([
-			isIOSPermissionGated(DeviceOrientationEvent) ? (DeviceOrientationEvent.requestPermission()
+			isIOSPermissionGated(window.DeviceOrientationEvent) ? (window.DeviceOrientationEvent.requestPermission()
 				.then(v => (v === "granted") ? Promise.resolve() : Promise.reject())) : Promise.resolve(),
-			isIOSPermissionGated(DeviceMotionEvent) ? (DeviceMotionEvent.requestPermission()
+			isIOSPermissionGated(window.DeviceMotionEvent) ? (window.DeviceMotionEvent.requestPermission()
 				.then(v => (v === "granted") ? Promise.resolve() : Promise.reject())) : Promise.resolve()
 		]);
 	}
