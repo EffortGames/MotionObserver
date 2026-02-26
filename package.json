@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "motion-observer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Observe device orientation and motion in a browser-agnostic fashion using the Observer pattern.",
   "main": "index.js",
   "types": "index.d.ts",
